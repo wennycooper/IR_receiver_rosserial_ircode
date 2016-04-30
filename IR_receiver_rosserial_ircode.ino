@@ -31,13 +31,13 @@ void setup()
 void loop() {
   flag2 = 0; flag3 = 0;
   if (irrecv2.decode(&results)) { // 接收紅外線訊號並解碼
-    if (results.value == 0x77E14050) flag2=1;
+    if (results.value == 0x43) flag2=1;
     irrecv2.resume(); // 準備接收下一個訊號
   }
 
 
   if (irrecv3.decode(&results)) { // 接收紅外線訊號並解碼
-    if (results.value == 0x77E14050) flag3=1;
+    if (results.value == 0x43) flag3=1;
     irrecv3.resume(); // 準備接收下一個訊號
   }
 
